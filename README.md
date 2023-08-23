@@ -1,2 +1,4 @@
 # Bangalore-Home-Prices-Prediction
-I have created a Real Estate Price Prediction Model using Python Libraries, Python Flask Server Framework and the front-end.  Open the  README file for more description.
+I have created a Real Estate Price Prediction Model using Python Libraries, Python Flask Server Framework and created the GUI front-end using basic HTML, CSS and JavaScript. I has namely 3 folders : Client - for GUI, Model - which contains the PICKLE file, JSON file, SOURCE file and CSV file and lastly Server - containing the FLASK server file and the UTIL file and artifacts containing the JSON source file again.
+I have worked upon the data : Removing or filling the N.A. values, Data Cleaning (cleaning the irrelevant or absurd data), applying GridSearchCV to choose the best model and Hypertuning of parameters and also its cross-validation. Finally, the model proved itself with a decent score of accuracy.
+It predicts the estimated price for the selected area in Bangalore based on the 'Area', 'Bhk' and 'Bath' input given by the user. It has also a dropdown menu for the 'Area' selection.
