@@ -1,4 +1,4 @@
 flask
 numpy
 sklearn
-/opt/render/project/src/.venv/bin/python -m pip install --upgrade pip
+pip==20.1.1
