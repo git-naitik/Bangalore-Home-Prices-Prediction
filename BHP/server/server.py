@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import util
+import os
 
 app = Flask(__name__)
 
@@ -20,7 +21,7 @@ def predict_home_price():
     bath = int(request.form['bath'])
 
     response = jsonify({
-        'estimated_price': util.get_estimated_price(location,total_sqft,bhk,bath)
+        'estimated_price': util.get_estimated_price(location, total_sqft, bhk, bath)
     })
     response.headers.add('Access-Control-Allow-Origin', '*')
 
@@ -28,5 +29,11 @@ def predict_home_price():
 
 if __name__ == "__main__":
     print("Starting Python Flask Server For Home Price Prediction...")
-    util.load_saved_artifacts()
+    
+    # Get the absolute path to the directory where server.py is located
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Load saved artifacts using the absolute path
+    util.load_saved_artifacts(os.path.join(base_dir, "artifacts"))
+    
     app.run()
